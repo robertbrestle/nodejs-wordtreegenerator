@@ -1,0 +1,15 @@
+{
+  "name": "nodejs-wordtreegenerator",
+  "version": "1.0.0",
+  "author": "robertbrestle",
+  "license": "MIT",
+  "description": "Splits a word list into an n-ary tree of characters",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha"
+  },
+  "dependencies": {
+    "mocha": "^9.2.0"
+  }
+}
