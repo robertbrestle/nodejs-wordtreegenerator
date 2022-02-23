@@ -18,6 +18,7 @@ try {
 	const words = fs.readFileSync(inputFile, "utf8");
 	
 	// build tree
+	// TODO: make this dynamic
 	words.split(/\r?\n/).forEach(word => {
 		if(typeof tree[word[0]] === "undefined") {
 			tree[word[0]] = {};
@@ -34,6 +35,12 @@ try {
 		if(typeof tree[word[0]][word[1]][word[2]][word[3]][word[4]] === "undefined") {
 			tree[word[0]][word[1]][word[2]][word[3]][word[4]] = 0;
 		}
+		/*
+		// enable for 6 letter words
+		if(typeof tree[word[0]][word[1]][word[2]][word[3]][word[4]][word[5]] === "undefined") {
+			tree[word[0]][word[1]][word[2]][word[3]][word[4]][word[5]] = 0;
+		}
+		*/
 	});
 	
 	console.log("Writing " + outputFile);
